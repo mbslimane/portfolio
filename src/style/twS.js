@@ -1,19 +1,24 @@
 import tw from 'tailwind-styled-components'
 
 export const Wrapper = tw.div`
-bg-bgGray-200 text-fontColor-100 py-20
-px-40
+bg-bgGray-200 text-fontColor-100 py-0
+px-4
+sm:px-9
+lg:px-40
 `
 
 export const Button = tw.button` 
     border-2 
     border-solid 
     border-fontColor-400
-    px-4 py-2
+    px-2 py-1
+    sm:px-4 sm:py-2
     border-opacity-50
   `
 export const BgSvg = tw.svg`
-w-full stroke-1 stroke-strokColor opacity-50
+hidden
+sm:flex
+ w-full stroke-1 stroke-strokColor opacity-50
 `
 
 export const H1 = tw.text`

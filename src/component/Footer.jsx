@@ -17,10 +17,10 @@ const Footer = () => {
                         <h2 className='text-fontColor-400 pl-0.5'>oloman</h2>
                     </LogoContainer>
 
-                    <H3>  personnel portfolio that shows the skill and the project that I have build</H3>
+                    <H3 className='md:w-1/2'>  personnel portfolio that shows the skill and the project that I have build</H3>
                 </div>
 
-                <div className="flex flex-col items-end">
+                <div className="flex flex-col md:items-end">
                     <nav className=' '>
                         <List>
                             <li className=''>
@@ -43,11 +43,11 @@ const Footer = () => {
                             </li>
                         </List>
                     </nav>
-                    <div className=" py-4 justify-end my-6 ">
+                    <Logos className="  ">
                         <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, marginInline: 5, borderRadius: 50, cursor: 'pointer' }} icon={faGithub} size='xl' />
                         <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, marginInline: 5, borderRadius: 50, cursor: 'pointer' }} icon={faInstagram} size='xl' />
                         <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, marginInline: 5, borderRadius: 50, cursor: 'pointer' }} icon={faLinkedin} size='xl' />
-                    </div>
+                    </Logos>
                 </div>
             </Container>
             <H3 className='text-fontColor-400 w-full flex justify-center'>copyright 2024 © all right reserved design by slimaneMb</H3>
@@ -58,17 +58,18 @@ const Footer = () => {
 export default Footer
 
 const Container = tw.div`
-    flex justify-between border-b-4 w-full
+    pt-5 grid grid-cols-1 justify-center md:flex md:justify-between border-b-4 w-full
 `
 const List = tw.div`
-flex items-center gap-6 list-none
+    sm:flex items-center gap-6 list-none hidden
 `
 const LogoContainer = tw.div`
-flex h-10 items-baseline
+    flex h-10 items-baseline
 `
+const Logos = tw.div`
+ py-4 flex items-center md:justify-center my-6
 
+`
 const H3 = tw.h3` 
-    text-fontColor-200
-    py-3
-    w-1/2
+    text-fontColor-200 py-3 
 `

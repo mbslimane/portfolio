@@ -51,27 +51,37 @@ const About = () => {
 
 export default About
 
-const Container = tw.div`
-px-40 
-flex gap-11
-justify-between
-`
 const Wrapper = tw.div`
-    py-28   
+    py-4
+    sm:py-10   
+    lg:py-28   
     bg-bgGray-100
+    
+    
+ `
+const Container = tw.div`
+gap-11 flex flex-col-reverse  items-center pb-32
+sm:flex-row lg:px-40 sm:pb-0
+justify-between
+
 `
 const Img = tw.img`
-    w-80 h-fit
+w-64 h-80 object-cover rounded-xl
+sm:w-80 sm:h-fit
+md:w-60
 `
 
 const AboutPContainer = tw.div`
     text-justify
     text-fontColor-200
     w-1/3
+    min-w-80
 `
 
 const AboutRight = tw.div`
-    w-1/3
+w-3/4    
+sm:w-1/3
+
 `
 
 const Line = tw.div`

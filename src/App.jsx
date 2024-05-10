@@ -32,8 +32,9 @@ function App() {
       setEmail,
       setPhoneNumber
     }}>
-      <Wrapper>
-        <Container>
+      <Wrapper >
+        {/* <Wrapper > */}
+        <Container className='bg-bgGray-200 overflow-x-scroll'>
           <Header />
           <Home />
           <About />

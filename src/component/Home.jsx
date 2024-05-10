@@ -10,7 +10,7 @@ const Home = () => {
 
     const { firstName, lastName } = useInfo()
     return (
-        <Wrapper className='pt-14' >
+        <Wrapper className='py-4 sm:p-14' >
             <BgTexte className='-ml-40' >
                 <BgSvg >
                     <text x='0' y='100' fill='transparent'>Creative</text>
@@ -48,21 +48,28 @@ const Home = () => {
 export default Home
 
 const Wrapper = tw.div`
- bg-bgGray-200 text-fontColor-100 py-10
- px-40
+ bg-bgGray-200 text-fontColor-100 py-0
+  px-5
+  
+sm:px-10
+md:px-40
 `
 
 const Intro = tw.div`
 flex justify-between 
+flex-col gap-2
+sm:flex-row
 `
 // Right Disgin......
-const RightIntro = tw.div` `
+const RightIntro = tw.div`
+`
 
 
 
 // Left Design......
 const LeftIntro = tw.div`
-flex gap-10 
+flex gap-10  w-full flex-1 justify-end
+
 `
 const Img = tw.img`
 h-60 w-60 rounded-full  object-cover

@@ -55,52 +55,42 @@ const Education = () => {
                     </EventContainer>
                 </Educated>
                 <MyimgContainer>
-                    <img className='w-64' src={myImg4} alt="" />
+                    <Img className='w-64' src={myImg4} alt="" />
                 </MyimgContainer>
             </Container>
         </Wrapper>
     )
 }
 export default Education
-//Styling
 
 const Container = tw.div`
-    flex
+    grid grid-cols-1 md:grid-cols-3 md:gap-4 pb-7
 `
-
 const Experienced = tw.div`
-    w-1/3 mr-12
+    mx-auto
 `
 const Educated = tw.div`
-    w-1/3
+    mx-auto
 `
 const MyimgContainer = tw.div`
-    w-1/3 justify-end items-center flex
+    items-center flex justify-center object-cover
 `
-
 const EventContainer = tw.div`
-    flex
-    justify-between
-    my-8
-    mr-3
+    flex justify-between my-8 mr-3
 `
-
 const DateDisplay = tw.h1`
-    w-1/2
-    text-xl
-    uppercase
-    first-letter:uppercase
-    text-fontColor-200
+    w-1/2 text-xl uppercase first-letter:uppercasetext-fontColor-200
 `
-
-//  ${className = 'tracking-widest bg-fontColor-400'}
 const Title = tw.h1`
-text-3xl font-bold w-60 text-fontColor-100
- tracking-widest
+    text-3xl font-bold w-60 text-fontColor-100 tracking-widest
 `
 const Span = tw.span`
     block text-fontColor-400 first-letter:uppercase
 `
 const EventDisc = tw.p`
     w-full
+`
+const Img = tw.img`
+    rounded-lg object-cover
+    transition duration-300 ease-in-out hover:scale-110
 `
