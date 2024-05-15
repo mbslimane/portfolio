@@ -81,14 +81,14 @@ const Footer = () => {
                         </List>
                     </nav>
                     <Logos >
-                        <Link onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
+                        <Link to='' onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
 
                             <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faGithub} size='xl' />
                         </Link>
-                        <Link onClick={() => { window.location.href = 'https://www.instagram.com/slimane.mb/' }}  >
+                        <Link to='' onClick={() => { window.location.href = 'https://www.instagram.com/slimane.mb/' }}  >
                             <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faInstagram} size='xl' />
                         </Link>
-                        <Link onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
+                        <Link to='' onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
                             <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faLinkedin} size='xl' />
                         </Link>
                     </Logos>
