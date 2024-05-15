@@ -6,42 +6,63 @@ import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-
 import tw from 'tailwind-styled-components'
 import { BgSvg, BgTexte, Button, LineContainer, LinePreTitle } from '../style/twS'
 import { useInfo } from '../contexts/userContext/InfoContext'
+import About from './About'
+import WorkPortfolio from './WorkPortfolio'
+import Education from './Education'
+import ContactUs from './ContactUs'
+import Footer from './Footer'
+import { Link } from 'react-router-dom'
+import { Element } from 'react-scroll'
 const Home = () => {
 
     const { firstName, lastName } = useInfo()
     return (
-        <Wrapper className='py-4 sm:p-14' >
-            <BgTexte className='-ml-40' >
-                <BgSvg >
-                    <text x='0' y='100' fill='transparent'>Creative</text>
-                </BgSvg>
-            </BgTexte>
-            <Intro>
-                <RightIntro >
-                    <LineContainer>
-                        <LinePreTitle />
-                        <p># INTRODUCTION</p>
-                    </LineContainer>
-                    <h1 className='text-3xl font-bold w-60'>I am {firstName} {lastName}</h1>
-                    <p className='text-fontColor-300 my-4'>web designer, for your personnel and business brand</p>
-                    <Button>View Profile</Button>
-                </RightIntro>
-                <LeftIntro>
-                    <Img src={myImg} alt="personnel Img" />
-                    <div className=" flex flex-col gap-5 justify-center">
-                        <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, borderRadius: 50, cursor: 'pointer' }} icon={faGithub} size='xl' />
-                        <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, borderRadius: 50, cursor: 'pointer' }} icon={faInstagram} size='xl' />
-                        <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, borderRadius: 50, cursor: 'pointer' }} icon={faLinkedin} size='xl' />
-                    </div>
-                </LeftIntro>
-            </Intro>
+        <>
+            <Element name='home' id='home'  ></Element>
+            <Wrapper className='py-4 sm:p-14' >
+                <BgTexte className='-ml-40' >
+                    <BgSvg >
+                        <text x='0' y='100' fill='transparent'>Creative</text>
+                    </BgSvg>
+                </BgTexte>
+                <Intro>
+                    <RightIntro >
+                        <LineContainer>
+                            <LinePreTitle />
+                            <p># INTRODUCTION</p>
+                        </LineContainer>
+                        <h1 className='text-3xl font-bold w-60'>I am {firstName} {lastName}</h1>
+                        <p className='text-fontColor-300 my-4'>web designer, for your personnel and business brand</p>
+                        {/* <Button>View Profile</Button> */}
+                    </RightIntro>
+                    <LeftIntro>
+                        <Img src={myImg} alt="personnel Img" />
+                        <div className=" flex flex-col gap-5 justify-center">
+                            <Link onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
+                                <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faGithub} size='xl' />
+                            </Link>
+                            <Link onClick={() => { window.location.href = 'https://www.instagram.com/slimane.mb/' }}  >
+                                <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faInstagram} size='xl' />
+                            </Link>
+                            <Link onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
+                                <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faLinkedin} size='xl' />
+                            </Link>
+                        </div>
+                    </LeftIntro>
+                </Intro>
 
-            <BgTexte>
-                <BgSvg >
-                    <text x='50%' y='120' fill='transparent'>Portfolio</text>
-                </BgSvg>
-            </BgTexte>
-        </Wrapper>
+                <BgTexte>
+                    <BgSvg >
+                        <text x='50%' y='120' fill='transparent'>Portfolio</text>
+                    </BgSvg>
+                </BgTexte>
+            </Wrapper>
+            <About />
+            <WorkPortfolio />
+            <Education />
+            <ContactUs />
+            <Footer />
+        </>
     )
 }
 

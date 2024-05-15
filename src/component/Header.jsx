@@ -6,6 +6,7 @@ import { Button } from '../style/twS';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const { firstName } = useInfo()
@@ -22,42 +23,71 @@ const Header = () => {
           <h2 className='text-fontColor-400 pl-0.5'>oloman</h2>
         </LogoContainer>
 
-        <nav className=''>
+        <nav>
           <List>
-            <li className='cursor-pointer'>
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
+            {/* Home */}
+            <Link
+              className='cursor-pointer'
+              activeClass="active"
+              to="home"
+            >
+              Home
+            </Link>
 
-              // onSetActive={handleSetActive}
-              >
-                About
-              </Link>
-            </li>
-            <li className=''>
-              <a href="#Pr">About</a>
-            </li>
-            <li className=''>
-              <a href="#">Services</a>
-            </li>
-            <li className=''>
-              <a href="#">Project</a>
-            </li>
-            <li className=''>
-              <a href="#">Pages</a>
-            </li>
-            <li className=''>
-              <a href="#">contact</a>
-            </li>
+            {/* About */}
+            <Link
+              className='cursor-pointer'
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              About
+            </Link>
+
+            {/*  Projects  */}
+            <Link
+              className='cursor-pointer '
+              activeClass="active"
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              Project
+            </Link>
+
+            {/* path */}
+            <Link
+              className='cursor-pointer'
+              activeClass="active"
+              to="path"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              Path
+            </Link>
           </List>
         </nav>
 
         <div>
-          <a href=""><Button >contact</Button></a>
+          <Link
+            className='cursor-pointer'
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <Button >contact</Button>
+          </Link>
+
         </div>
       </Container>
     </Wrapper>

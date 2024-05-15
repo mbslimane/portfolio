@@ -5,11 +5,15 @@ import myProject1 from '../assets/myProject1.jpg'
 import myProject2 from '../assets/myProject2.jpg'
 import myProject3 from '../assets/myProject3.jpg'
 import myProject4 from '../assets/myProject4.jpg'
+import { Element } from 'react-scroll'
+import { useNavigate } from 'react-router-dom'
 
 
 const WorkPortfolio = () => {
+    const navigate = useNavigate()
     return (
         <Wrapper className='bg-bgGray-200'>
+            <Element id='portfolio' name='portfolio'></Element>
             <Title>
                 <LineContainer>
                     <p># work & portfolio</p>
@@ -35,7 +39,7 @@ const WorkPortfolio = () => {
                         <ProjectDesc>lamasocial is social media app to communicate with ones community</ProjectDesc>
                     </Project>
 
-                    <Project>
+                    <Project onClick={() => { window.location.href = 'https://mbslimane.github.io/weather-app/' }}>
                         <ImgContainer>
                             <Img src={myProject3} alt="" />
                         </ImgContainer>
@@ -43,9 +47,9 @@ const WorkPortfolio = () => {
                         <ProjectDesc>a responsive web app that allows you to get the forecast for any spot on earth </ProjectDesc>
                     </Project>
 
-                    <Project>
+                    <Project >
                         <ImgContainer >
-                            <Img src={myProject4} alt="" />
+                            <Img onClick={() => { console.log("ffff"), window.location.href = 'https://mbslimane.github.io/hangManGame/' }} src={myProject4} alt="" />
                         </ImgContainer>
                         <ProjectTitle># Hanger man</ProjectTitle>
                         <ProjectDesc>a game that gives you hints to find the word we seek </ProjectDesc>

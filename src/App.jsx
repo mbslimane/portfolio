@@ -9,7 +9,8 @@ import WorkPortfolio from './component/WorkPortfolio';
 import Education from './component/Education';
 import ContactUs from './component/ContactUs';
 import Footer from './component/Footer';
-
+import { Route, RouterProvider, createRoutesFromElements, createBrowserRouter } from 'react-router-dom'
+import RouteLayout from './Layout/RouteLayout';
 
 function App() {
   const firstName = "Slimane";
@@ -21,6 +22,22 @@ function App() {
   const setLastName = () => { }
   const setEmail = () => { }
   const setPhoneNumber = () => { }
+
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<RouteLayout />}>
+        <Route index path='/' element={<Home />} />
+
+        {/* <Route path='/about' element={<About />} />
+        <Route path='/portfolio' element={<WorkPortfolio />} />
+        < Route path='/path' element={<Education />} />
+        < Route path='/contact' element={<ContactUs />} /> */}
+        {/* < Route path='/contact' element={<ContactUs />} /> */}
+      </Route>
+    )
+  )
+
   return (
     <InfoProvider value={{
       firstName,
@@ -32,16 +49,20 @@ function App() {
       setEmail,
       setPhoneNumber
     }}>
+
       <Wrapper >
-        {/* <Wrapper > */}
         <Container className='bg-bgGray-200 overflow-x-scroll'>
-          <Header />
+          {/* <About /> */}
+          {/* <Header />
           <Home />
-          <About />
           <WorkPortfolio />
           <Education />
           <ContactUs />
-          <Footer />
+          <Footer /> */}
+
+          <RouterProvider router={router} />
+
+
         </Container>
       </Wrapper>
     </InfoProvider>

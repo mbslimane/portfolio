@@ -5,6 +5,8 @@ import sImg from '../assets/ss.png'
 import Header from './Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 const Footer = () => {
     return (
@@ -23,30 +25,72 @@ const Footer = () => {
                 <div className="flex flex-col md:items-end">
                     <nav className=' '>
                         <List>
-                            <li className=''>
-                                <a rel="stylesheet" href="#" >Home</a>
-                            </li>
-                            <li className=''>
-                                <a href="#">About Me</a>
-                            </li>
-                            <li className=''>
-                                <a href="#">Services</a>
-                            </li>
-                            <li className=''>
-                                <a href="#">Project</a>
-                            </li>
-                            <li className=''>
-                                <a href="#">Pages</a>
-                            </li>
-                            <li className=''>
-                                <a href="#">contact Us</a>
-                            </li>
+                            <Link
+                                className='cursor-pointer'
+                                activeClass="active"
+                                to="home"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            // onSetActive={handleSetActive}
+                            >
+                                Home
+                            </Link>
+
+                            {/* About */}
+                            <Link
+                                className='cursor-pointer'
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            // onSetActive={handleSetActive}
+                            >
+                                About
+                            </Link>
+
+
+                            {/*  Projects  */}
+                            <NavLink
+                                className='cursor-pointer active:bg-red'
+                                // activeClass="active"
+                                to="portfolio"
+                            >
+                                Project
+                            </NavLink>
+
+                            {/* path */}
+                            <NavLink
+                                className='cursor-pointer'
+                                to="path"
+                            >
+                                Path
+                            </NavLink>
+
+                            {/*  Contact Me */}
+                            <NavLink
+                                className='cursor-pointer'
+                                // activeClass="active"
+                                to="contact"
+                            >
+                                contact
+                            </NavLink>
                         </List>
                     </nav>
-                    <Logos className="  ">
-                        <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, marginInline: 5, borderRadius: 50, cursor: 'pointer' }} icon={faGithub} size='xl' />
-                        <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, marginInline: 5, borderRadius: 50, cursor: 'pointer' }} icon={faInstagram} size='xl' />
-                        <FontAwesomeIcon style={{ border: "1px solid #fa5d36", padding: 8, marginInline: 5, borderRadius: 50, cursor: 'pointer' }} icon={faLinkedin} size='xl' />
+                    <Logos >
+                        <Link onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
+
+                            <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faGithub} size='xl' />
+                        </Link>
+                        <Link onClick={() => { window.location.href = 'https://www.instagram.com/slimane.mb/' }}  >
+                            <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faInstagram} size='xl' />
+                        </Link>
+                        <Link onClick={() => { window.location.href = 'https://github.com/mbslimane' }}  >
+                            <FontAwesomeIcon className='border border-fontColor-400 rounded-full p-2 cursor-pointer' icon={faLinkedin} size='xl' />
+                        </Link>
                     </Logos>
                 </div>
             </Container>
@@ -67,7 +111,7 @@ const LogoContainer = tw.div`
     flex h-10 items-baseline
 `
 const Logos = tw.div`
- py-4 flex items-center md:justify-center my-6
+ py-4 flex items-center md:justify-center my-6 gap-2
 
 `
 const H3 = tw.h3` 

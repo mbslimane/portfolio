@@ -2,11 +2,13 @@ import React from 'react'
 import { H1, LineContainer, LinePreTitle, Wrapper } from '../style/twS'
 import tw from 'tailwind-styled-components'
 import myImg4 from '../assets/myImg3.jpg'
+import { Element } from 'react-scroll'
 
 
 const Education = () => {
     return (
         <Wrapper className='bg-bgGray-100'>
+            <Element id='path' name='path'></Element>
             <Container>
                 <Experienced>
                     <LineContainer>

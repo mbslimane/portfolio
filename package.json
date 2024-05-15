@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -23,6 +24,7 @@
     "font-awesome": "^4.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1",
     "react-scroll": "^1.9.0",
     "styled-components": "^6.1.8",
     "tailwind-styled-components": "^2.2.0"

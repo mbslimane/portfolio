@@ -9,8 +9,8 @@ import { Element } from 'react-scroll'
 const About = () => {
     return (
         <Wrapper >
+            <Element id='about' name='about'></Element>
             <Container>
-                <Element id='about' name='about'></Element>
                 <Img src={myImg2}></Img>
                 <AboutPContainer>
                     <p >
@@ -42,7 +42,7 @@ const About = () => {
             </Container>
             <BgTexte className='-mt-36'>
                 <BgSvg>
-                    <Text x="65%" y="100" fill='transparent' >About</Text>
+                    <text x="65%" y="100" fill='transparent' >About</text>
                 </BgSvg>
             </BgTexte>
         </Wrapper>
@@ -61,7 +61,7 @@ const Wrapper = tw.div`
  `
 const Container = tw.div`
 gap-11 flex flex-col-reverse  items-center pb-32
-sm:flex-row lg:px-40 sm:pb-0
+sm:flex-row lg:px-40 sm:pb-0 sm:items-start
 justify-between
 
 `
@@ -69,6 +69,7 @@ const Img = tw.img`
 w-64 h-80 object-cover rounded-xl
 sm:w-80 sm:h-fit
 md:w-60
+transition duration-300 ease-in-out hover:scale-110
 `
 
 const AboutPContainer = tw.div`
@@ -77,16 +78,13 @@ const AboutPContainer = tw.div`
     w-1/3
     min-w-80
 `
-
 const AboutRight = tw.div`
-w-3/4    
-sm:w-1/3
+    w-3/4    
+    sm:w-1/3
 
 `
-
 const Line = tw.div`
     w-full border-t my-10
 `
-
 const Text = tw.text`
 `
