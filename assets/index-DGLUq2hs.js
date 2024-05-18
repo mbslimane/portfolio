@@ -982,7 +982,7 @@ flex gap-10  w-full flex-1 justify-end
 
 `,C3=$.img`
 h-60 w-60 rounded-full  object-cover
-`,_3=()=>g.jsxs(g.Fragment,{children:[g.jsx(xE,{}),g.jsx("main",{children:g.jsx(JS,{})})]});function P3(){const e="Slimane",t="Moussaoubrahim",n="mbsloimane16@gmail.com",r="1234567890",a=()=>{},i=()=>{},o=()=>{},l=()=>{},s=iE(cc(g.jsx(uc,{path:"/",element:g.jsx(_3,{}),children:g.jsx(uc,{index:!0,path:"/",element:g.jsx(x3,{})})})));return g.jsx(uw,{value:{firstName:e,lastName:t,email:n,phoneNumber:r,setFirstName:a,setLastName:i,setEmail:o,setPhoneNumber:l},children:g.jsx(T3,{children:g.jsx(j3,{className:"bg-bgGray-200 overflow-x-scroll",children:g.jsx(pE,{router:s})})})})}const T3=$.div`
+`,_3=()=>g.jsxs(g.Fragment,{children:[g.jsx(xE,{}),g.jsx("main",{children:g.jsx(JS,{})})]});function P3(){const e="Slimane",t="Moussaoubrahim",n="mbsloimane16@gmail.com",r="1234567890",a=()=>{},i=()=>{},o=()=>{},l=()=>{},s=iE(cc(g.jsx(uc,{path:"/",element:g.jsx(_3,{}),children:g.jsx(uc,{index:!0,path:"/portfolio",element:g.jsx(x3,{})})})));return g.jsx(uw,{value:{firstName:e,lastName:t,email:n,phoneNumber:r,setFirstName:a,setLastName:i,setEmail:o,setPhoneNumber:l},children:g.jsx(T3,{children:g.jsx(j3,{className:"bg-bgGray-200 overflow-x-scroll",children:g.jsx(pE,{router:s})})})})}const T3=$.div`
 bg-bgGray-100 h-full w-full
 `,j3=$.div`
 max-w-screen-2xl flex-col justify-center items-center m-auto 
